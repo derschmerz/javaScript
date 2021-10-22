@@ -185,3 +185,29 @@ letter("y"); */
 };
 
 letter("a"); */
+
+/* Примеры на создание функций в JavaScript */
+// let arr1 = [1, 2, 3, 4]
+// let arr2 = [5, 6, 7, 8]
+
+// // let sum = 0
+// // for (let elem of arr) {
+// //   sum += elem;
+// // }
+// // let sum2 = 0;
+
+// // for (let elem of arr2) {
+// // 	sum2 += elem;
+// // }
+// // console.log(sum2);
+// // console.log(sum);
+
+// function sumArr(arr){
+// let sum = 0
+// for (let elem of arr) {
+//   sum += elem*elem;
+// }
+// return sum
+// }
+// console.log(sumArr(arr1))
+// console.log(sumArr(arr2))
