@@ -51,7 +51,6 @@
 // const func = (num1, num2) => num1 === num2 ? console.log("true") : console.log("false");
 // func(2, 2)
 
-
 //  Сделайте функцию, которая параметрами принимает 2 числа. Если их сумма больше 10 - пусть вернет true, а если нет то - false.
 // const func = (num1, num2) => (num1 + num2) > 10 ? console.log("true") : console.log("false");
 // func(20, 2)
@@ -63,7 +62,6 @@
 //  Сделайте функцию isNumberInRange, которая параметром принимает число и проверяет, что оно больше нуля и меньше 10. Если это так - пусть функция возвращает true, если не так - false.
 // let isNumberInRange = (num1) => num1 > 0 && num1 < 10 ? true : false;
 // // isNumberInRange(20)
-
 
 // //  Дан массив с числами. Запишите в новый массив только те числа, которые больше нуля и меньше 10-ти. Для этого используйте вспомогательную функцию isNumberInRange из предыдущей задачи.
 
@@ -77,7 +75,6 @@
 // console.log(arr2);
 
 //  Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр.
-
 
 /* let num = 1
 let getDigitsSum = (num) => {
@@ -95,8 +92,7 @@ let getDigitsSum = (num) => {
 //  if (getDigitsSum(num) === 13){
 //     console.log(num);
 //  }
-// } 
-
+// }
 
 //  Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное - false.
 
@@ -126,13 +122,27 @@ let getDigitsSum = (num) => {
 // }
 // console.log(getDivisors(7))
 
-
 //  Дан массив с числами. Выведите последовательно его элементы.
 
 /* let arr = [1, 23, 222, 15]
-for (i = 0; i < arr.length; i++)
-console.log(arr[i]); */
-
+const arrSort = (arr) => {
+    const result = [];
+    for (i = 0; i < arr.length; i++) {
+        if (!i) {
+        result[i] = arr[i];
+        continue;
+    }
+    if (arr[i] > result[i - 1]) {
+        result[i] = arr[i]
+    } else {
+        const a = result[i-1]
+        result[i-1] = arr[i];
+        result [i] = a;
+    }
+    }
+    console.log(result);
+}
+console.log(arrSort(arr)); */
 //  Дано число. Сложите его цифры. Если сумма получилась более 9-ти, опять сложите его цифры. И так, пока сумма не станет однозначным числом (9 и менее).
 
 // let num = 0;
@@ -147,8 +157,22 @@ console.log(arr[i]); */
 //   } else {
 //     console.log(sum);
 //   }
-  
+
 // };
-// getDigitsSum(3419);
+// getDigitsSum(1234);
+
+// const evenNine = (num) => {
+//   num = `${num}`;
+//   let sum = 0;
+//   for (i = 0; i < num.length; i++) {
+//     sum += +num[i];
+//   }
+//   if (sum > 9) {
+//     return evenNine(sum);
+//   } else {
+//     return sum;
+//   }
+// };
+// console.log(evenNine(2478));
 
 

@@ -45,12 +45,11 @@ sum(16, 4) */
 const userName =  getName ('max')
 console.log(userName); */
 
-
 // function getName (useName) {
 //     return useName;
 // }
 // let name = 'alex';
-// const nameUserOne = getName(name) 
+// const nameUserOne = getName(name)
 // console.log (nameUserOne);
 
 // name = 'ivan';
@@ -80,7 +79,6 @@ function sum() {
 sum(); 
 sum();
 sum(); */
-
 
 /* function sum() {
   const a = 0;
@@ -211,3 +209,18 @@ letter("a"); */
 // }
 // console.log(sumArr(arr1))
 // console.log(sumArr(arr2))
+
+// Напишите стрелочную функцию, которая будет возвращать true если строка является палиндромом и false в противном случае.
+/* const isPilindrom = (str) => {
+  let newStr = "";
+  for (let i = 0; i < str.length; i += 1) {
+    newStr += str[str.length - i];
+  }
+  if (newStr === str) {
+    return true;
+  } else {
+    return false;
+  }
+  console.log(newStr);
+};
+console.log(isPilindrom('abvgd')); */

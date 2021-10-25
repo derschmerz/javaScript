@@ -160,3 +160,11 @@ while (N >= M) {
     N = (N / 2);
     days  +=1}
     console.log(days); */
+
+
+
+    function func (num) {
+      return Math.sqrt (num)
+    }
+    let result = func(16) + func(4)
+    console.log(result);
