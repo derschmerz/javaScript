@@ -65,7 +65,6 @@
 // }
 // console.log(capitalize(str))
 
-Престижио, [28.10.21 17:00]
 // 1. Преобразовать строку в массив слов
 
 // Напишите функцию stringToarray(str), которая преобразует строку в массив слов.
@@ -211,10 +210,8 @@
 
 // str = "HelloWorld"
 // function initSnake(str) {
-// let str = str.replace(/[A-Z]/g, function (low) {
-//   return "_" + low.toLowerCase();
-// });
-// return str.replace(/^_/, "");
+// var str2 = str.split(/(?=[A-Z])/).join('_').toLowerCase();
+// return str2
 // };
 // console.log(initSnake(str));
 
@@ -248,22 +245,21 @@
 // var str2 = "знать";
 
 // String.prototype.endsWith = function(substring) {
-    
+
 
 // };
 
 // 16. Подстрока до/после указанного символа
 // Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos.
 
-var str = 'Астрономия — Наука о небесных телах';
-let char = ""
-function getSubstr(str, char, pos) {
-let str2 = str.substring(str.lastIndexOf(char) + 1);
+// var str = 'Астрономия — Наука о небесных телах';
+// let char = ""
+// function getSubstr(str, char, pos) {
+// let str2 = str.substring(str.lastIndexOf(char) + 1);
 
-console.log(str2);
- 
-};
-console.log(getSubstr(str, "H"));
+// console.log(str2);
+// };
+// console.log(getSubstr(str, "H"));
 
 // 17. Вставить подстроку в указанную позицию строки
 // Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
