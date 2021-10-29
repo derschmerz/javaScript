@@ -245,65 +245,89 @@
 // var str2 = "знать";
 
 // String.prototype.endsWith = function(substring) {
-
-
+// 
+//         if(substring.length > this.length) return false;
+//         return this.substr(this.length - substring.length) === substring;
 // };
+// console.log(str.endsWith(str1))
+
+/*  Другой вариант
+   let arr2 = str.split(" ");
+//     if (arr2[arr2.length - 1] == substring.toString()) {console.log(true);} else {console.log(false);}
+//          */ 
 
 // 16. Подстрока до/после указанного символа
 // Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos.
 
 // var str = 'Астрономия — Наука о небесных телах';
 // let char = ""
+// let str2 =""
 // function getSubstr(str, char, pos) {
-// let str2 = str.substring(str.lastIndexOf(char) + 1);
-
-// console.log(str2);
+// if (pos === "after") {
+//     str2 = str.substring(100, str.lastIndexOf(char));
+// } else if (pos == "before") {
+//     str2 = str.slice(0, str.lastIndexOf(char));
+// }
+// return str2
+ 
 // };
-// console.log(getSubstr(str, "H"));
+// console.log(getSubstr(str, "Н", "before"));
 
-// 17. Вставить подстроку в указанную позицию строки
+// // 17. Вставить подстроку в указанную позицию строки
 // Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
 
+ 
 // function insert(str, substr, pos) {
-//     ...ваш код...
+//     let arr = str.split(" ");
+//     arr.splice(pos, 0, substr).join (" ");
+//     return arr
 // };
+// console.log(insert("Ритусик", "Привет"));
 
 // 18. Ограничить длину строки
 // Напишите функцию limitStr(str, n, symb), которая обрезает строку, если она длиннее указанного количества символов n. Усеченная строка должна заканчиваться троеточием «...» (если не задан параметр symb) или заданным символом symb.
 
-// function limitStr(str, n, symb) {
-//     ...ваш код...
-// };
-
-
+// function limitStr(str, n, symb = "...") {
+   
+//   if (str.length>n) {
+//       return str.substring(0, n) + symb }
+//   } 
+//   console.log(limitStr("Привет Ритусик!", 8));
 
 // 19. Количество вхождений символа в строке
 // Напишите функцию count(str, stringsearch), которая возвращает количество символов stringsearch в строке str.
 
 // var symb = "о", str = "Астрономия это наука о небесных объектах";
 // function count(str, symb) {
-//     ...ваш код...
-// };
+// let pos = -1;
+// while ((pos = str.indexOf(symb, pos + 1)) != -1)
+// return pos
+// }
+// console.log(count(str, symb));
 
 // 21. Удалить лишние пробелы из строки
 // Напишите функцию strip(str), которая удаляет все лишние пробелы из строки str.
 
-// var str = "    Max is a good      boy     "; 
+// var str = "    Max is a good      boy     ";
 
 // function strip(str) {
-//     ...ваш код...
+//      return str.replace(/\s+/g, ' ').trim()
+           
 // };
+// console.log(strip(str));
 
 // 23. Удалить лишние слова из строки
 
 // Напишите функцию cutString(str, n), которая удаляет лишние слова из строки str, оставив в ней n слов.
 
-// var str = "Сила тяжести приложена к центру масс тела"; 
+// var str = "Сила тяжести приложена к центру масс тела";
 
 // function cutString(str, n) {
-//     ...ваш код...
+    
+//     return str.split(" ", n)
+   
 // };
-
+// console.log(cutString(str, 4));
 
 // 24. Найти слово в строке
 // Напишите функцию findWord(word, str), которая проверяет, существует ли в строке str слова word.
@@ -311,5 +335,9 @@
 // var str = 'abc def ghi jkl mno pqr stu';
 
 // function findWord(word, str) {
-//     ...ваш код...
-// };
+//     let result = str.matchAll(word)
+//     for (match of result)
+//     return match
+//     console.log(match);
+// }
+// console.log(findWord("mno", str));
