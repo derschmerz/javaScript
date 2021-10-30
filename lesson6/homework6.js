@@ -1,4 +1,3 @@
-
 // 1. Преобразовать строку в массив слов
 
 // Напишите функцию stringToarray(str), которая преобразует строку в массив слов.
@@ -33,7 +32,7 @@
 // let str2 = 0;
 // function insert_dash(str) {
 //     str2 = str.replace(space, "-").toUpperCase()
-   
+
 // }
 // insert_dash(str);
 // console.log(str2);
@@ -42,8 +41,8 @@
 
 // Напишите функцию, которая принимает строку в качестве аргумента и преобразует регистр первого символа строки из нижнего регистра в верхний.
 
-// var str = "string not starting with capital";  
- 
+// var str = "string not starting with capital";
+
 // function cursive_letter(str) {
 //     let str2;
 //     return str2 = str.charAt(0).toUpperCase() + str.slice(1)
@@ -56,10 +55,9 @@
 
 // Напишите функцию capitalize(str), которая возвращает строку, в которой каждое слово начинается с заглавной буквы.
 
-// var str = "каждый охотник желает знать";  
- 
-// function capitalize(str) {
+// var str = "каждый охотник желает знать";
 
+// function capitalize(str) {
 
 //     return str.replace(/(^|\s)\S/g, m => m.toUpperCase())
 // }
@@ -215,14 +213,13 @@
 // };
 // console.log(initSnake(str));
 
-
 // 13. Повторить строку n раз
 // Напишите функцию repeatStr(str, n), которая возвращает строку повторяемую определённое количество раз.
 
 // let str = ""
 // function repeatStr(str, n) {
 //     let str2 = str.repeat(n)
-//     return str2 
+//     return str2
 // };
 // console.log(repeatStr("Hello world ",5));
 
@@ -245,7 +242,7 @@
 // var str2 = "знать";
 
 // String.prototype.endsWith = function(substring) {
-// 
+//
 //         if(substring.length > this.length) return false;
 //         return this.substr(this.length - substring.length) === substring;
 // };
@@ -254,7 +251,22 @@
 /*  Другой вариант
    let arr2 = str.split(" ");
 //     if (arr2[arr2.length - 1] == substring.toString()) {console.log(true);} else {console.log(false);}
-//          */ 
+//          */
+
+/* const str = "String Random";
+const subStr = "Random";
+
+String.prototype.endsWith = (str, substr) => {
+  const findStr = String(str.match(/(\S+)$/g));
+  console.log(findStr);
+  if (substr === findStr) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+String.prototype.endsWith(str, subStr); */
 
 // 16. Подстрока до/после указанного символа
 // Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки, расположенную после или до указанного символа char в зависимости от параметра pos.
@@ -269,14 +281,25 @@
 //     str2 = str.slice(0, str.lastIndexOf(char));
 // }
 // return str2
- 
+
 // };
 // console.log(getSubstr(str, "Н", "before"));
+
+// var str = 'Астрономия — Наука о небесных телах';
+// function getSubstr(str, char, pos) {
+//     if (pos === "до") {
+//             return str.slice(0,char);
+//         } else if (pos === "после") {
+//             return str.slice(char);
+//         } else {
+//         return "error"
+//         }
+//     }
+//     console.log(getSubstr(str, "10", "после"))
 
 // // 17. Вставить подстроку в указанную позицию строки
 // Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str. По умолчанию подстрока вставляется в начало строки.
 
- 
 // function insert(str, substr, pos) {
 //     let arr = str.split(" ");
 //     arr.splice(pos, 0, substr).join (" ");
@@ -288,10 +311,10 @@
 // Напишите функцию limitStr(str, n, symb), которая обрезает строку, если она длиннее указанного количества символов n. Усеченная строка должна заканчиваться троеточием «...» (если не задан параметр symb) или заданным символом symb.
 
 // function limitStr(str, n, symb = "...") {
-   
+
 //   if (str.length>n) {
 //       return str.substring(0, n) + symb }
-//   } 
+//   }
 //   console.log(limitStr("Привет Ритусик!", 8));
 
 // 19. Количество вхождений символа в строке
@@ -305,6 +328,8 @@
 // }
 // console.log(count(str, symb));
 
+
+
 // 21. Удалить лишние пробелы из строки
 // Напишите функцию strip(str), которая удаляет все лишние пробелы из строки str.
 
@@ -312,7 +337,7 @@
 
 // function strip(str) {
 //      return str.replace(/\s+/g, ' ').trim()
-           
+
 // };
 // console.log(strip(str));
 
@@ -323,9 +348,9 @@
 // var str = "Сила тяжести приложена к центру масс тела";
 
 // function cutString(str, n) {
-    
+
 //     return str.split(" ", n)
-   
+
 // };
 // console.log(cutString(str, 4));
 
