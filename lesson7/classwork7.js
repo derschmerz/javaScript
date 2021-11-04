@@ -114,13 +114,13 @@
  и будет сравнивать их, если они идентичны (элементы совпадают по значению и по индексу)
   то функция возвращает true, в противном случае false. */
 
-let arr1 = [1, 2, 3, -4, -44, 90, 3, 2];
-let arr2 = [1, 2, 3, -4, -44, 90, 3, 2];
+// let arr1 = [1, 2, 3, -4, -44, 90, 3, 2];
+// let arr2 = [1, 2, 3, -4, -44, 90, 3, 2];
 
-const isEqualArr = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  return !arr1.map((el, i) => el === arr2[i]).includes(false);
-};
-console.log(isEqualArr(arr1, arr2));
+// const isEqualArr = (arr1, arr2) => {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+//   return !arr1.map((el, i) => el === arr2[i]).includes(false);
+// };
+// console.log(isEqualArr(arr1, arr2));
