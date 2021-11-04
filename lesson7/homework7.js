@@ -32,8 +32,8 @@
 // var array = [0, 1, 2, 3, 4, 5, 6, 7];
 
 // function sumSeven(array, sum) {
-//   let first = 0;
-//   let last = array.length - 1;
+//   let first = array[0];
+//   let last = array[array.length-1];
 //   let result = [];
 //   while (first < last) {
 //     let s = array[first] + array[last];
