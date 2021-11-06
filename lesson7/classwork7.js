@@ -124,3 +124,4 @@
 //   return !arr1.map((el, i) => el === arr2[i]).includes(false);
 // };
 // console.log(isEqualArr(arr1, arr2));
+
