@@ -222,3 +222,100 @@
 // firstCard.setFromValue("max")
 // console.log(firstCard);
 // firstCard.show()
+
+// class Parent {
+//   constructor(name) {
+//     this.name = name;
+//   }
+
+//   sayName() {
+//     return `Привет, мое имя ${this.name}`;
+//   }
+// }
+
+// const firstParent = new Parent("max");
+// // console.log(firstParent);
+// // console.log((firstParent.sayName()));
+
+// class Child extends Parent {
+    
+//   constructor(name, lastName) {
+//     super(name);
+//     this.lastName = lastName;
+//   }
+
+// sayName() {
+//     console.log('Это внутренний метод');
+// }
+
+//   sayFullName() {
+//       const nameString = `${super.sayName()} ${this.lastName}`
+//     return nameString;
+//   }
+
+// get LastName () {
+//     return this.lastName;
+// }
+
+// set LastName (newValue) {
+//     this._lastName = newValue;
+// }
+
+// getLastName () {
+//     return this._lastName
+// }
+
+
+// setLastName() {
+//     this.lastName = newValue;
+// }
+
+// }
+
+// const firstChild = new Child("ivan", "Petrov");
+
+// console.log(firstChild);
+// // console.log(firstChild.sayFullName());
+// // console.log(firstChild.sayName());
+// // firstChild.sayName()
+
+// firstChild.setLastName("Smirnov")
+// firstChild.lastName("Smirnov")
+
+// console.log(firstChild.getLastName());
+
+// console.log(firstChild.lastName);
+
+
+class People {
+    constructor(name,surname) {
+        this.name = name;
+        this.surname = surname;
+    }
+
+getFullName() {
+         return `Имя: ${this.name}, Фамилия: ${this.surname}`
+      }
+}
+
+      const firstPeople = new People("ivan", "Petrov");
+      
+      console.log(firstPeople.getFullName());
+
+
+      class Worker extends People {
+        constructor(name,surname, rate, day) {
+                super(name,surname);
+                this.rate = rate;
+                this.day = day;
+              }
+              getSalary() {
+                  return `${this.getFullName()}, Зарплата: ${this.rate*this.day} руб.`
+              }
+      }
+
+const firstWorker = new Worker ("Petr", "Petrov", 1500, 20)
+const secondWorker = new Worker ("Semen", "Petrov", 1900, 2)
+console.log(firstWorker.getSalary());
+console.log(secondWorker.getSalary());
+
